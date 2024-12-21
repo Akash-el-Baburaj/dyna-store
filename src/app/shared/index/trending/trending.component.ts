@@ -28,9 +28,9 @@ export class TrendingComponent implements OnInit {
   productData = [
     {
       id:'1',
-      image:['assets/img/shop/catalog/01.jpg','assets/img/shop/single/gallery/th01.jpg'],
-      category: 'Sneakers & Keds',
-      name:'Women Colorblock Sneakers',
+      image:['assets/img/dyna-store/mattress1.webp','assets/img/dyna-store/matress1(1).webp','assets/img/dyna-store/matress1(2).webp','assets/img/dyna-store/matress1(3).webp'],
+      category: 'Mattress',
+      name:'Dyna Hybrid Mattress',
       price: '154.00',
       discount: '',
       rating: 3.5,
@@ -38,14 +38,14 @@ export class TrendingComponent implements OnInit {
       size:['7.5','8','8.5','9'],
       colors:[],
       type:'size',
-      cat:'Sneakers',
+      cat:'Mattress',
       brand:'adidas'
     },
     {
       id:'2',
-      image:['assets/img/shop/catalog/02.jpg'],
-      category: 'Women’s T-shirt',
-      name:'Cotton Lace Blouse',
+      image:['assets/img/dyna-store/matress3(3).webp','assets/img/dyna-store/matress3(2).webp', 'assets/img/dyna-store/matress3(4).webp'],
+      category: 'Mattress',
+      name:'Dyna Original Mattress',
       price: '28.50',
       discount: '38.50',
       rating:3,
@@ -53,14 +53,14 @@ export class TrendingComponent implements OnInit {
       size:[],
       colors:['#eaeaeb','#d1dceb','#f4e6a2','#f3dcff'],
       type:'color',
-      cat:'Blouses',
+      cat:'Mattress',
       brand:'ataylor'
     },
     {
       id:'3',
-      image:['assets/img/shop/catalog/03.jpg'],
-      category: 'Women’s Shorts',
-      name:'Mom High Waist Shorts',
+      image:['assets/img/dyna-store/matress3(1).webp', 'assets/img/dyna-store/matress3(5).webp'],
+      category: 'Mattress',
+      name:'Dyna Latex ll Mattress',
       price: '28.50',
       discount: '39.50',
       rating:5,
@@ -68,14 +68,14 @@ export class TrendingComponent implements OnInit {
       size:['XS','S','M','L'],
       colors:[],
       type:'size',
-      cat:'Shorts',
+      cat:'Mattress',
       brand:'ataylor'
     },
     {
       id:'4',
-      image:['assets/img/shop/catalog/04.jpg'],
-      category: 'Sportswear',
-      name:'Women Sports Jacket',
+      image:['assets/img/dyna-store/matress5(1).webp', 'assets/img/dyna-store/matress5(2).webp', 'assets/img/dyna-store/matress5(3).webp', 'assets/img/dyna-store/matress5(4).webp'],
+      category: 'Mattress',
+      name:'Dyna Black Matress',
       price: '68.40',
       discount: '',
       rating:4,
@@ -83,14 +83,14 @@ export class TrendingComponent implements OnInit {
       size:['XS','S','M','L'],
       colors:[],
       type:'size',
-      cat:'Sportswear',
+      cat:'Mattress',
       brand:'ataylor'
     },
     {
       id:'5',
-      image:['assets/img/shop/catalog/05.jpg'],
-      category: 'Men’s Sunglasses',
-      name:'Polarized Sunglasses',
+      image:['assets/img/dyna-store/pillow1(1).webp'],
+      category: 'Pillow',
+      name:'Dyna Memory Form Pillow',
       price: '',
       discount: '',
       rating:4.5,
@@ -98,14 +98,14 @@ export class TrendingComponent implements OnInit {
       size:[],
       colors:[],
       type:'details',
-      cat:'Classic',
+      cat:'Pillow',
       brand:'armani'
     },
     {
       id:'6',
-      image:['assets/img/shop/catalog/06.jpg'],
-      category: 'Backpacks',
-      name:'TH Jeans City Backpack',
+      image:['assets/img/dyna-store/pillow2(1).webp'],
+      category: 'Pillow',
+      name:'Dyna Hybrid Pillow',
       price: '79.50',
       discount: '',
       rating:3,
@@ -113,13 +113,13 @@ export class TrendingComponent implements OnInit {
       size:[],
       colors:['#97947c','#99a8be','#eaeaeb'],
       type:'color',
-      cat:'Backpacks'
+      cat:'Pillow'
     },
     {
       id:'7',
-      image:['assets/img/shop/catalog/07.jpg'],
-      category: `Women's Swimwear`,
-      name:'Two-Piece Bikini in Print',
+      image:['assets/img/dyna-store/pillow1(2).webp'],
+      category: `Pillow`,
+      name:'Dyna Original Pillow',
       price: '18.99',
       discount: '',
       rating:4,
@@ -127,20 +127,21 @@ export class TrendingComponent implements OnInit {
       size:['XS','S','M'],
       colors:[],
       type:'size',
-      cat:'Swimwear'
+      cat:'Pillow'
     },
     {
       id:'8',
-      image:['assets/img/shop/catalog/08.jpg'],
-      category: `Kid's Toys`,
-      name:'Soft Panda Teddy Bear',
+      image:['assets/img/dyna-store/pillow1(3).webp'],
+      category: `Pillow`,
+      name:'Dyna Wave ll Pillow',
       price: '14.99',
       discount: '',
       rating:5,
       review:30,
       size:[],
       colors:[],
-      type:'size'
+      type:'size',
+      cat: 'Pillow'
     },
   ]
 
