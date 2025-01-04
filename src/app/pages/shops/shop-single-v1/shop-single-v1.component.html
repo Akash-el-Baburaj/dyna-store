@@ -28,24 +28,24 @@
           <div class="product-gallery">
             <div class="product-gallery-preview order-sm-2">
               <div class="product-gallery-preview-item active" id="first"><img class="image-zoom"
-                  src="assets/img/shop/single/gallery/01.jpg" data-zoom="img/shop/single/gallery/01.jpg"
+                  src="src/assets/img/dyna-store/mattress1.webp" data-zoom="img/dyna-store/mattress1.webp"
                   alt="Product image">
                 <div class="image-zoom-pane"></div>
               </div>
             </div>
             <div class="product-gallery-thumblist order-sm-1">
               <a class="product-gallery-thumblist-item active" href="javascript:void(0);"
-                (click)="filterImg($event,'assets/img/shop/single/gallery/01.jpg')"><img
-                  src="assets/img/shop/single/gallery/th01.jpg" alt="Product thumb"></a>
+                (click)="filterImg($event,'src/assets/img/dyna-store/mattress1.webp')"><img
+                src="src/assets/img/dyna-store/mattress1.webp" alt="Product thumb"></a>
               <a class="product-gallery-thumblist-item" href="javascript:void(0);"
-                (click)="filterImg($event,'assets/img/shop/single/gallery/02.jpg')"><img
-                  src="assets/img/shop/single/gallery/th02.jpg" alt="Product thumb"></a>
+                (click)="filterImg($event,'src/assets/img/dyna-store/matress1(1).webp')"><img
+                  src="src/assets/img/dyna-store/matress1(1).webp" alt="Product thumb"></a>
               <a class="product-gallery-thumblist-item" href="javascript:void(0);"
-                (click)="filterImg($event,'assets/img/shop/single/gallery/03.jpg')"><img
-                  src="assets/img/shop/single/gallery/th03.jpg" alt="Product thumb"></a>
+                (click)="filterImg($event,'src/assets/img/dyna-store/matress1(2).webp')"><img
+                  src="src/assets/img/dyna-store/matress1(2).webp" alt="Product thumb"></a>
               <a class="product-gallery-thumblist-item" href="javascript:void(0);"
-                (click)="filterImg($event,'assets/img/shop/single/gallery/04.jpg')"><img
-                  src="assets/img/shop/single/gallery/th04.jpg" alt="Product thumb"></a>
+                (click)="filterImg($event,'src/assets/img/dyna-store/matress1(3).webp')"><img
+                  src="src/assets/img/dyna-store/matress1(3).webp" alt="Product thumb"></a>
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@
               <del class="text-muted fs-lg me-3">$25.<small>00</small></del><span
                 class="badge bg-danger badge-shadow align-middle mt-n2">Sale</span>
             </div>
-            <div class="fs-sm mb-4"><span class="text-heading fw-medium me-1">Color:</span><span class="text-muted"
+            <!-- <div class="fs-sm mb-4"><span class="text-heading fw-medium me-1">Color:</span><span class="text-muted"
                 id="colorOption">Red/Dark blue/White</span></div>
             <div class="position-relative me-n4 mb-3">
               <div class="form-check form-option form-check-inline mb-2">
@@ -93,9 +93,9 @@
               </div>
               <div class="product-badge product-available mt-n1"><i class="ci-security-check"></i>Product available
               </div>
-            </div>
-            <form class="mb-grid-gutter" method="post">
-              <div class="mb-3">
+            </div> -->
+            <!-- <form class="mb-grid-gutter" method="post"> -->
+              <!-- <div class="mb-3">
                 <div class="d-flex justify-content-between align-items-center pb-1">
                   <label class="form-label" for="product-size">Size:</label><a class="nav-link-style fs-sm"
                     href="javascript:void(0);" data-bs-toggle="modal" (click)="sizetModal(sizeChartModal)"><i
@@ -109,6 +109,123 @@
                   <option value="l">L</option>
                   <option value="xl">XL</option>
                 </select>
+              </div> -->
+              <div class="mb-3">
+                <!-- <h5>CATEGORY</h5> -->
+                <label class="fw-medium pb-1 me-2" for="product-size">CATEGORY:</label>
+                <div class="d-flex" role="group" aria-label="Category">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'Single'"
+                    (click)="setCategory('Single')"
+                  >
+                    Single
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'Double'"
+                    (click)="setCategory('Double')"
+                  >
+                    Double
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'Queen'"
+                    (click)="setCategory('Queen')"
+                  >
+                    Queen
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'King'"
+                    (click)="setCategory('King')"
+                  >
+                    King
+                  </button>
+                  <!-- <br>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    [class.active]="selectedCategory === 'Custom Size'"
+                    (click)="setCategory('Custom Size')"
+                  >
+                    Custom Size
+                  </button> -->
+                </div>
+              </div>
+            
+              <!-- Height Section -->
+              <div class="mb-3">
+                <!-- <h5>HEIGHT</h5> -->
+                <label class="fw-medium pb-1 me-2" for="product-size">HEIGHT:</label><br>
+                <div class="btn-group" role="group" aria-label="Height">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedHeight === 6"
+                    (click)="setHeight(6)"
+                  >
+                    6 inch
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedHeight === 8"
+                    (click)="setHeight(8)"
+                  >
+                    8 inch
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    [class.active]="selectedHeight === 10"
+                    (click)="setHeight(10)"
+                  >
+                    10 inch
+                  </button>
+                </div>
+              </div>
+            
+              <!-- Dimension Section -->
+              <div class="mb-3">
+                <!-- <h5>DIMENSION</h5> -->
+                <label class="fw-medium pb-1 me-2" for="product-size">DIMENSION:</label>
+                <ul class="nav nav-tabs mb-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      [class.active]="selectedDimensionUnit === 'inch'"
+                      (click)="setDimensionUnit('inch')"
+                      >Inch</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      [class.active]="selectedDimensionUnit === 'cm'"
+                      (click)="setDimensionUnit('cm')"
+                      >CM</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      [class.active]="selectedDimensionUnit === 'feet'"
+                      (click)="setDimensionUnit('feet')"
+                      >Feet</a
+                    >
+                  </li>
+                </ul>
+                <select class="form-select" [(ngModel)]="selectedDimension">
+                  <option value="">Select a size</option>
+                  <option *ngFor="let option of dimensionOptions" [value]="option">
+                    {{ option }}
+                  </option>
+                </select>
               </div>
               <div class="mb-3 d-flex align-items-center">
                 <select class="form-select me-3" style="width: 5rem;">
@@ -121,7 +238,7 @@
                 <button class="btn btn-primary btn-shadow d-block w-100" type="submit"><i
                     class="ci-cart fs-lg me-2"></i>Add to Cart</button>
               </div>
-            </form>
+            <!-- </form> -->
             <!-- Product panels-->
 
             <ngb-accordion #acc="ngbAccordion" activeIds="static-1" [closeOthers]="true">

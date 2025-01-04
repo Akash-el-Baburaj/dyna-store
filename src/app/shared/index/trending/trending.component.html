@@ -138,14 +138,14 @@
             <div class="product-badge product-available mt-n1"><i class="ci-security-check"></i>Product available</div>
           </div> -->
           <div class="fs-sm mb-4"><span class="text-heading fw-medium me-1">Select Category:</span><span class="text-muted" id="colorOptionText"></span></div>
-          <div class="position-relative me-n4 mb-3">
+          <!-- <div class="position-relative me-n4 mb-3">
                          <button type="button" class="btn btn-primary rounded-pill me-2">Single</button>
             <button type="button" class="btn btn-accent rounded-pill me-2">Double</button>
             <button type="button" class="btn btn-accent rounded-pill me-2">Queen</button>
             <button type="button" class="btn btn-accent rounded-pill me-2">King</button>
 
           </div>
-          <form class="mb-grid-gutter">
+          <form class="mb-grid-gutter"> -->
             <!-- <div class="mb-3">
               <label class="fw-medium pb-1 me-2" for="product-size">Select Category:</label>
               <select class="form-select" required id="product-size">
@@ -161,7 +161,7 @@
               <button type="button" class="btn btn-accent rounded-pill me-2">Queen</button>
               <button type="button" class="btn btn-accent rounded-pill me-2">King</button>
             </div> -->
-            <div class="mb-3">
+            <!-- <div class="mb-3">
               <label class="fw-medium pb-1" for="product-size">Hieght:</label>
               <select class="form-select" required id="product-size">
                 <option value="">Select Hieght</option>
@@ -180,7 +180,128 @@
                 <option value="m">72 x 42 in</option>
                 <option value="l">72 x 36 in</option>
               </select>
-            </div>
+            </div> -->
+            <!-- <div class="container"> -->
+              <!-- Category Section -->
+              <div class="mb-3">
+                <!-- <h5>CATEGORY</h5> -->
+                <label class="fw-medium pb-1 me-2" for="product-size">CATEGORY:</label>
+                <div class="d-flex" role="group" aria-label="Category">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'Single'"
+                    (click)="setCategory('Single')"
+                  >
+                    Single
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'Double'"
+                    (click)="setCategory('Double')"
+                  >
+                    Double
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'Queen'"
+                    (click)="setCategory('Queen')"
+                  >
+                    Queen
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedCategory === 'King'"
+                    (click)="setCategory('King')"
+                  >
+                    King
+                  </button>
+                  <!-- <br>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    [class.active]="selectedCategory === 'Custom Size'"
+                    (click)="setCategory('Custom Size')"
+                  >
+                    Custom Size
+                  </button> -->
+                </div>
+              </div>
+            
+              <!-- Height Section -->
+              <div class="mb-3">
+                <!-- <h5>HEIGHT</h5> -->
+                <label class="fw-medium pb-1 me-2" for="product-size">HEIGHT:</label><br>
+                <div class="btn-group" role="group" aria-label="Height">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedHeight === 6"
+                    (click)="setHeight(6)"
+                  >
+                    6 inch
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary me-2"
+                    [class.active]="selectedHeight === 8"
+                    (click)="setHeight(8)"
+                  >
+                    8 inch
+                  </button>
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary"
+                    [class.active]="selectedHeight === 10"
+                    (click)="setHeight(10)"
+                  >
+                    10 inch
+                  </button>
+                </div>
+              </div>
+            
+              <!-- Dimension Section -->
+              <div class="mb-3">
+                <!-- <h5>DIMENSION</h5> -->
+                <label class="fw-medium pb-1 me-2" for="product-size">DIMENSION:</label>
+                <ul class="nav nav-tabs mb-3">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      [class.active]="selectedDimensionUnit === 'inch'"
+                      (click)="setDimensionUnit('inch')"
+                      >Inch</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      [class.active]="selectedDimensionUnit === 'cm'"
+                      (click)="setDimensionUnit('cm')"
+                      >CM</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a
+                      class="nav-link"
+                      [class.active]="selectedDimensionUnit === 'feet'"
+                      (click)="setDimensionUnit('feet')"
+                      >Feet</a
+                    >
+                  </li>
+                </ul>
+                <select class="form-select" [(ngModel)]="selectedDimension">
+                  <option value="">Select a size</option>
+                  <option *ngFor="let option of dimensionOptions" [value]="option">
+                    {{ option }}
+                  </option>
+                </select>
+              </div>
+            <!-- </div> -->
+            
             <div class="mb-3 d-flex align-items-center">
               <select class="form-select me-3" style="width: 5rem;">
                 <option value="1">1</option>
@@ -191,7 +312,7 @@
               </select>
               <button class="btn btn-primary btn-shadow d-block w-100" type="submit"><i class="ci-cart fs-lg me-2"></i>Add to Cart</button>
             </div>
-          </form>
+          <!-- </form> -->
           <h5 class="h6 mb-3 pb-2 border-bottom"><i class="ci-announcement text-muted fs-lg align-middle mt-n1 me-2"></i>Product info</h5>
           <h6 class="fs-sm mb-2">Style</h6>
           <ul class="fs-sm ps-4">

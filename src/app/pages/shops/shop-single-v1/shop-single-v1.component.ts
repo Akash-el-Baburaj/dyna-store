@@ -25,11 +25,24 @@ export class ShopSingleV1Component implements OnInit {
   styleDatas:any;
   populerDatas:any;
 
+  selectedCategory = 'Single';
+  selectedHeight = 6;
+  selectedDimensionUnit = 'inch';
+  selectedDimension = '';
+  dimensionOptions: string[] = [];
+
+  dimensionData: { [key: string]: string[] } = {
+    inch: ['72 x 30 x 6 inches', '72 x 36 x 6 inches', '75 x 36 x 6 inches', '78 x 36 x 6 inches'],
+    cm: ['182.9 x 76.2 x 15.2 cm', '182.9 x 91.4 x 15.2 cm', '190.5 x 91.4 x 15.2 cm', '198.1 x 91.4 x 15.2 cm'],
+    feet: ['6 x 2.5 x 0.5 feet', '6 x 3 x 0.5 feet', '6.25 x 3 x 0.5 feet', '6.5 x 3 x 0.5 feet']
+  };
+
   constructor(private modalService: NgbModal, private formBuilder: UntypedFormBuilder) { }
 
   ngOnInit(): void {
     this.styleDatas = StyleData;
     this.populerDatas = PopulerData;
+    this.setDimensionUnit(this.selectedDimensionUnit);
     /**
      * Form Validatyion
      */
@@ -39,6 +52,20 @@ export class ShopSingleV1Component implements OnInit {
       rating: ['', [Validators.required]],
       review: ['', [Validators.required]],
     });
+  }
+
+  setCategory(category: string): void {
+    this.selectedCategory = category;
+  }
+
+  setHeight(height: number): void {
+    this.selectedHeight = height;
+  }
+
+  setDimensionUnit(unit: string): void {
+    this.selectedDimensionUnit = unit;
+    this.dimensionOptions = this.dimensionData[unit];
+    this.selectedDimension = '';
   }
 
   /**
